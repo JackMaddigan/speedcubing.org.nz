@@ -15,11 +15,6 @@
 </section>
 
 <style>
-  h2 {
-    font-family: "Public Sans", sans-serif;
-    font-weight: 600;
-  }
-
   section {
     display: flex;
     width: 50%;

@@ -3,13 +3,11 @@
 </script>
 
 <section>
-  <h1>Interested in competing?</h1>
+  <h1>Got questions?</h1>
   <h3>
-    Our competitions are enjoyed by competitors of all ages and speeds, from
-    beginners to world class solvers!<br /><br />Check out all of our upcoming
-    competitions!
+    You can find lots of common questions and helpful answers on our FAQ page!
   </h3>
-  <Button text="Competitions" link="/"></Button>
+  <Button text="FAQ" link="/"></Button>
 </section>
 
 <style>
@@ -21,7 +19,7 @@
     text-align: center;
     box-sizing: border-box;
     padding: 32px 24px;
-    background-color: #fbeedb;
+    background-color: #dce3e9;
     border-top: 1px solid #aaaaaa;
     color: black;
   }

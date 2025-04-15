@@ -6,6 +6,8 @@
   import Header from "../components/Header.svelte";
   import HomeAbout from "../components/HomeAbout.svelte";
   import HomeCompRow from "../components/HomeCompRow.svelte";
+  import HomeFaqRow from "../components/HomeFaqRow.svelte";
+  import HomeSocialsRow from "../components/HomeSocialsRow.svelte";
 </script>
 
 <Header></Header>
@@ -14,6 +16,8 @@
   <HomeAbout></HomeAbout>
 </section>
 <HomeCompRow></HomeCompRow>
+<HomeSocialsRow></HomeSocialsRow>
+<HomeFaqRow></HomeFaqRow>
 
 <Footer></Footer>
 
