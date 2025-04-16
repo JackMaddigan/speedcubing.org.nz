@@ -1,22 +1,24 @@
 <script>
-  import logo from "../assets/logo.png";
   let menuOpen = false;
 </script>
 
 <header class="header">
   <div class="header">
     <div class="header-items">
-      <a href="/"><img src={logo} alt="SNZ logo" /></a>
+      <a href="/"><img src="logo/Full_white.webp" alt="SNZ logo" /></a>
       <button class="hamburger" on:click={() => (menuOpen = !menuOpen)}>
         ☰
       </button>
     </div>
 
     <div class="nav" class:open={menuOpen}>
-      <a href="./about.html">About</a>
-      <a href="./competitions.html">Competitions</a>
-      <a href="./faq.html">FAQ</a>
-      <a href="./contact.html">Contact</a>
+      <a href="/">GETTING STARTED</a>
+      <a href="./competitions.html">COMPETITIONS</a>
+      <a href="./faq.html">TOP CUBERS</a>
+      <a href="./contact.html">ABOUT</a>
+      <a href="./contact.html">FAQ</a>
+      <a href="./contact.html">SHOP</a>
+      <a href="./contact.html">CONTACT</a>
     </div>
   </div>
 </header>
@@ -25,22 +27,21 @@
   .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #1a1a1b;
+    height: 100px;
   }
 
   .header-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
   }
 
   .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
   }
 
   .hamburger {
@@ -51,24 +52,27 @@
     padding: 8px;
     cursor: pointer;
     user-select: none;
+    font-weight: 100;
+    color: white;
   }
 
   img {
-    width: 180px;
+    width: 90px;
     padding: 16px;
   }
 
   .nav a {
     font-family: "Public Sans", sans-serif;
     font-weight: 300;
-    padding: 16px;
+    font-size: 14px;
+    padding: 0px 16px;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     cursor: pointer;
   }
 
   .nav a:hover {
-    color: #3777ff;
+    color: #aaaaaa;
     transition: color 0.3s ease;
   }
 
@@ -85,7 +89,7 @@
       display: flex;
     }
     .hamburger {
-      display: flex;
+      display: block;
     }
   }
 </style>

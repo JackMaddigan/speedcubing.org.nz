@@ -1,9 +1,10 @@
 body{
   margin: 0;
+  font-family: 'League Spartan', sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: "Public Sans", sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 h1 {
