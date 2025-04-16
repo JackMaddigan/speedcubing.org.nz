@@ -4,16 +4,14 @@
 
 <header class="header">
   <div class="header">
-    <div class="header-items">
-      <a href="/"><img src="logo/Full_white.webp" alt="SNZ logo" /></a>
-      <button
-        class="hamburger"
-        on:click={() => (menuOpen = !menuOpen)}
-        aria-label="menu"
-      >
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
+    <a href="/"><img src="logo/Full_white.webp" alt="SNZ logo" /></a>
+    <button
+      class="hamburger"
+      on:click={() => (menuOpen = !menuOpen)}
+      aria-label="menu"
+    >
+      <i class="bi bi-list"></i>
+    </button>
 
     <div class="nav" class:open={menuOpen}>
       <a href="/">GETTING STARTED</a>
@@ -38,12 +36,6 @@
     align-items: center;
     background-color: #101010;
     height: 100px;
-  }
-
-  .header-items {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
   }
 
   .nav {
@@ -85,7 +77,8 @@
 
   @media screen and (max-width: 768px) {
     .header {
-      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
     }
     .nav {
       display: none;
@@ -93,13 +86,11 @@
       top: 100px;
       flex-direction: column;
       align-items: center;
-    }
-    .header-items {
-      justify-content: space-between;
+      background-color: #1a1a1b;
+      width: 100%;
     }
     .nav a {
-      padding: 8px;
-      background-color: #1a1a1b;
+      padding: 12px;
     }
     .nav.open {
       display: flex;
