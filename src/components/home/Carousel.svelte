@@ -26,7 +26,7 @@
 
   function resetInterval() {
     clearInterval(interval);
-    interval = setInterval(next, 4000);
+    interval = setInterval(next, 6000);
   }
 </script>
 
@@ -50,7 +50,7 @@
 <style>
   .carousel {
     height: calc(100vh - 180px);
-    background-color: #1a1a1b;
+    background-color: var(colorBlack2);
     overflow: hidden;
     position: relative;
   }
@@ -66,7 +66,7 @@
   button {
     background: none;
     border: none;
-    color: white;
+    color: var(--colorWhite);
     position: absolute;
     top: 50%;
     font-size: 32px;
@@ -82,7 +82,7 @@
 
   button:hover {
     transition: color 0.3s ease;
-    color: #aaaaaa;
+    color: var(--colorGrey2);
   }
   @media screen and (max-width: 768px) {
     .carousel {

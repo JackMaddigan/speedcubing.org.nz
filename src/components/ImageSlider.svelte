@@ -21,7 +21,7 @@
     padding: 48px 0px;
     display: flex;
     flex-direction: row;
-    background-color: #1a1a1b;
+    background-color: var(--colorBlack2);
   }
   img {
     height: 200px;
@@ -34,8 +34,6 @@
     section {
       overflow-x: auto;
       scroll-behavior: smooth;
-      /* gap: 1rem; */
-      /* padding: 1rem; */
       scrollbar-width: none; /* Firefox */
     }
     img {

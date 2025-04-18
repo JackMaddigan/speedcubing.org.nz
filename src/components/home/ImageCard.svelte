@@ -18,7 +18,7 @@
   .title,
   .text {
     position: absolute;
-    background-color: #101010;
+    background-color: var(--colorBlack3);
     color: white;
     left: 50%;
     transform: translateX(-50%);

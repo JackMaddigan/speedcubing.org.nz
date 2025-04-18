@@ -5,6 +5,7 @@
 <span>
   {#if liveResults}
     <a
+      class="compActionLink"
       href="https://live.worldcubeassociation.org/link/competitions/{compId}"
       target="_blank"
     >
@@ -13,6 +14,7 @@
   {/if}
   {#if groups}
     <a
+      class="compActionLink"
       href="https://www.competitiongroups.com/competitions/{compId}"
       target="_blank"
     >
@@ -26,9 +28,9 @@
     display: flex;
     gap: 16px;
   }
-  a {
-    background-color: #384aa7;
-    color: white;
+  .compActionLink {
+    background-color: var(--colorBlue2);
+    color: var(--colorWhite);
     padding: 8px;
     border-radius: 5px;
     text-decoration: none;

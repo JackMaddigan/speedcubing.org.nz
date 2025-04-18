@@ -88,43 +88,43 @@
     padding: 10px;
     text-align: left;
     font-weight: bold;
-    border: 1px solid #3a3a3a;
+    border: 1px solid var(--colorBlack1);
   }
   td {
     padding: 10px;
     text-align: left;
-    border: 1px solid #3a3a3a;
+    border: 1px solid var(--colorBlack1);
   }
   td,
   tr {
     font-family: "Public Sans", serif;
   }
   .green {
-    background-color: #4caf50;
+    background-color: var(--colorGreen1);
   }
   .red {
-    background-color: #d95c4f;
+    background-color: var(--colorRed1);
   }
   .blue {
-    background-color: #384aa7;
+    background-color: var(--colorBlue2);
   }
   tbody tr {
-    background-color: #1e1e1f;
+    background-color: var(--colorCompTable1);
   }
   tbody tr:nth-child(even) {
-    background-color: #272728;
+    background-color: var(--colorCompTable2);
   }
   .cityName {
     font-weight: 200;
     font-size: 0.8em;
-    color: #c5c5c5;
+    color: var(--colorGrey1);
   }
   .venueName,
   .compName,
   .compDate {
     font-weight: 400;
     text-decoration: none;
-    color: #c5c5c5;
+    color: var(--colorGrey1);
   }
   .cubing-icon {
     padding: 2px;

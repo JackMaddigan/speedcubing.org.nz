@@ -35,10 +35,10 @@
   }
   input {
     border: none;
-    border-bottom: 1px solid #ababab;
+    border-bottom: 1px solid var(--colorGrey2);
     background: none;
     padding: 8px;
-    color: #ababab;
+    color: var(--colorGrey2);
     width: 130px;
   }
   form {
@@ -50,20 +50,7 @@
     box-shadow: none;
   }
   section {
-    background-color: #1a1a1b;
-    color: white;
-  }
-  h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: 500;
-  }
-  h4 {
-    margin: 0;
-    padding: 16px;
-    font-size: 0.9rem;
-    font-weight: 100;
-    color: #dbdbdb;
+    background-color: var(--colorBlack2);
   }
   @media screen and (max-width: 768px) {
     form,

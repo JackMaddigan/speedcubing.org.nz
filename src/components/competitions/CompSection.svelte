@@ -6,9 +6,9 @@
 </script>
 
 {#await data}
-  <div class="loading">Loading Competitions...</div>
+  <div class="loading bgCol">Loading Competitions...</div>
 {:then { current, upcoming, recent }}
-  <section class="compSection">
+  <section class="compSection bgCol">
     <section class="current">
       {#if current.length}
         <h1>CURRENT COMPETITIONS</h1>
@@ -25,7 +25,7 @@
     </section>
     <h4>
       To see all past competitions, click <a
-        class="link"
+        class="blueLink"
         href="https://www.worldcubeassociation.org/competitions?region=NZ&state=past"
         target="_blank">here</a
       >.
@@ -34,12 +34,6 @@
 {/await}
 
 <style>
-  .compSection,
-  .loading {
-    background-color: #1a1a1b;
-    color: white;
-  }
-
   .loading {
     height: 500px;
     padding-top: 32px;
@@ -55,18 +49,6 @@
     align-items: center;
     max-width: 800px;
     margin: auto;
-  }
-  h1 {
-    font-size: 2.2rem;
-    font-weight: 500;
-  }
-  h4 {
-    margin: 0;
-    text-align: center;
-    font-weight: 100;
-  }
-  .link {
-    color: #1e90ff;
-    text-decoration: underline;
+    padding: 16px;
   }
 </style>

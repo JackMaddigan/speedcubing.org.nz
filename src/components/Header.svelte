@@ -1,4 +1,5 @@
 <script>
+  import "bootstrap-icons/font/bootstrap-icons.css";
   let menuOpen = false;
 </script>
 
@@ -34,7 +35,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #101010;
+    background-color: var(--colorBlack3);
     height: 100px;
   }
 
@@ -52,7 +53,7 @@
     cursor: pointer;
     user-select: none;
     font-weight: 100;
-    color: white;
+    color: var(--colorWhite);
   }
 
   img {
@@ -61,17 +62,16 @@
   }
 
   .nav a {
-    font-family: "Public Sans", sans-serif;
     font-weight: 300;
     font-size: 14px;
     padding: 0px 16px;
     text-decoration: none;
-    color: #fff;
+    color: var(--colorWhite);
     cursor: pointer;
   }
 
   .nav a:hover {
-    color: #aaaaaa;
+    color: var(--colorGrey2);
     transition: color 0.3s ease;
   }
 
@@ -86,7 +86,7 @@
       top: 100px;
       flex-direction: column;
       align-items: center;
-      background-color: #1a1a1b;
+      background-color: var(--colorBlack2);
       width: 100%;
     }
     .nav a {

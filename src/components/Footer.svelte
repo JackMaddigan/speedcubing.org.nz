@@ -1,3 +1,7 @@
+<script>
+  import "bootstrap-icons/font/bootstrap-icons.css";
+</script>
+
 <section>
   <div class="socials">
     <a href="https://facebook.com/SpeedcubingNZ" aria-label="facebook">
@@ -24,11 +28,11 @@
     gap: 24px;
   }
   .icon {
-    color: #fff;
+    color: var(--colorWhite);
     font-size: 2.5rem;
   }
   section {
-    background-color: #1a1a1b;
-    color: white;
+    background-color: var(--colorBlack2);
+    color: var(--colorWhite);
   }
 </style>

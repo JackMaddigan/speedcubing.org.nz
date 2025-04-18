@@ -16,21 +16,9 @@
 </section>
 
 <style>
-  h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: 500;
-  }
-  h4 {
-    margin: 0;
-    padding: 16px;
-    font-size: 0.9rem;
-    font-weight: 100;
-    color: #dbdbdb;
-  }
   section {
-    background-color: #1a1a1b;
-    color: white;
+    background-color: var(--colorBlack2);
+    color: var(--colorWhite);
   }
   .container {
     margin: 0 auto;
