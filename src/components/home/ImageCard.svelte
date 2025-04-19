@@ -49,6 +49,5 @@
   }
   section:hover {
     transform: scale(1.1);
-    z-index: 99;
   }
 </style>

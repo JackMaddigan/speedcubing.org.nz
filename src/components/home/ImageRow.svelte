@@ -27,7 +27,8 @@
   section {
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
+    background-color: var(--colorBlack2);
+    overflow: hidden;
   }
   @media screen and (max-width: 768px) {
     section {
