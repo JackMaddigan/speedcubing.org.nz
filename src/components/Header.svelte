@@ -15,12 +15,11 @@
     </button>
 
     <div class="nav" class:open={menuOpen}>
-      <a href="/">GETTING STARTED</a>
+      <a href="./start">GETTING STARTED</a>
       <a href="./competitions">COMPETITIONS</a>
-      <a href="./faq">TOP CUBERS</a>
-      <a href="./contact">ABOUT</a>
+      <a href="./nzs-best">NZ'S BEST</a>
+      <a href="./about">ABOUT</a>
       <a href="./faq">FAQ</a>
-      <a href="./shop">SHOP</a>
       <a href="./contact">CONTACT</a>
     </div>
   </div>
