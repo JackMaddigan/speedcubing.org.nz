@@ -27,7 +27,7 @@
 
 <a
   class="reg-link"
-  href="https://www.worldcubeassociation.org/competitions/{comp.id}/register"
+  href={comp.externalWebsite || `https://www.worldcubeassociation.org/competitions/${comp.id}/register`}
   target="blank">{regMessage}</a
 >
 

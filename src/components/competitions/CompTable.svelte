@@ -1,5 +1,4 @@
 <script>
-  import { dateToShort, formatRegText } from "$lib/load_competitions";
   import ButtonSpan from "./ButtonSpan.svelte";
   import RegSpan from "./RegSpan.svelte";
   const eventOrder = [
@@ -22,6 +21,15 @@
     "333mbf",
   ];
   let { tableType, comps } = $props();
+  
+  function dateToShort(dateString) {
+  // param: yyyy-mm-dd
+  return new Date(dateString).toLocaleDateString("en-US", {
+    timeZone: "Pacific/Auckland",
+    day: "numeric",
+    month: "short", // Abbreviated month (e.g., "Feb")
+  });
+}
 </script>
 
 <table>

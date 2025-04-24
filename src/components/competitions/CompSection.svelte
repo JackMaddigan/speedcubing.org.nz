@@ -1,27 +1,32 @@
 <script>
   import CompTable from "./CompTable.svelte";
   import { loadCompetitions } from "$lib/load_competitions";
-  let { comps } = $props();
-  let data = loadCompetitions();
+  import { onMount } from "svelte";
+
+  let data;
+
+  onMount(async () => {
+    data = await loadCompetitions();
+  })
 </script>
 
-{#await data}
+{#if !data}
   <div class="loading bgCol">Loading Competitions...</div>
-{:then { current, upcoming, recent }}
+{:else}
   <section class="compSection bgCol">
     <section class="current">
-      {#if current.length}
+      {#if data.current.length}
         <h1>CURRENT COMPETITIONS</h1>
-        <CompTable tableType="blue" comps={current}></CompTable>
+        <CompTable tableType="blue" comps={data.current}></CompTable>
       {/if}
     </section>
     <section class="upcoming">
       <h1>UPCOMING COMPETITIONS</h1>
-      <CompTable tableType="green" comps={upcoming}></CompTable>
+      <CompTable tableType="green" comps={data.upcoming}></CompTable>
     </section>
     <section class="recent">
       <h1>RECENT COMPETITIONS</h1>
-      <CompTable tableType="red" comps={recent}></CompTable>
+      <CompTable tableType="red" comps={data.recent}></CompTable>
     </section>
     <h4>
       To see all past competitions, click <a
@@ -31,7 +36,7 @@
       >.
     </h4>
   </section>
-{/await}
+{/if}
 
 <style>
   .loading {
