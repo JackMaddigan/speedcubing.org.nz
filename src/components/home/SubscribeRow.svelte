@@ -71,51 +71,6 @@
   </div>
 </section>
 
-<!-- <style>
- 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
-  }
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  input[type="email"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-
-  .success {
-    color: green;
-    margin-top: 10px;
-  }
-
-  .error {
-    color: red;
-    margin-top: 10px;
-  }
-</style> -->
-
 <style>
   .error {
     color: red;
