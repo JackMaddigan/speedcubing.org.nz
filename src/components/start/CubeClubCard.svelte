@@ -22,6 +22,7 @@
     padding: 16px 8px;
     background-color: #4a4a4b;
     border-radius: 8px;
+    text-align: center;
   }
   h3{
     margin-top: 16px;

@@ -10,38 +10,54 @@
   })
 </script>
 
-{#if !data}
-  <div class="loading bgCol">Loading Competitions...</div>
-{:else}
-  <section class="compSection bgCol">
-    <section class="current">
+<section class="container">
+  {#if !data}
+    <div class="loading">Loading Competitions...</div>
+  {:else}
+    <section>
       {#if data.current.length}
-        <h1>CURRENT COMPETITIONS</h1>
-        <CompTable tableType="blue" comps={data.current}></CompTable>
+      <section class="current">
+          <h1>CURRENT COMPETITIONS</h1>
+          <CompTable tableType="blue" comps={data.current}></CompTable>
+      </section>
       {/if}
+      <section class="upcoming">
+        <h1 class="title">UPCOMING COMPETITIONS</h1>
+        <CompTable tableType="green" comps={data.upcoming}></CompTable>
+      </section>
+      <section class="recent">
+        <h1 class="title">RECENT COMPETITIONS</h1>
+        <CompTable tableType="red" comps={data.recent}></CompTable>
+      </section>
+      <p>
+        To see all past competitions, click <a
+          class="blueLink"
+          href="https://www.worldcubeassociation.org/competitions?region=NZ&state=past"
+          target="_blank">here</a
+        >.
+      </p>
     </section>
-    <section class="upcoming">
-      <h1>UPCOMING COMPETITIONS</h1>
-      <CompTable tableType="green" comps={data.upcoming}></CompTable>
-    </section>
-    <section class="recent">
-      <h1>RECENT COMPETITIONS</h1>
-      <CompTable tableType="red" comps={data.recent}></CompTable>
-    </section>
-    <h4>
-      To see all past competitions, click <a
-        class="blueLink"
-        href="https://www.worldcubeassociation.org/competitions?region=NZ&state=past"
-        target="_blank">here</a
-      >.
-    </h4>
-  </section>
-{/if}
+  {/if}
+</section>
 
 <style>
   .loading {
     height: 500px;
     padding-top: 32px;
+    text-align: center;
+    background-color: var(--colorBlack2);
+    color: var(--colorWhite);
+  }
+
+  .container{
+    padding: 16px 0px;
+  }
+
+  section{
+    background-color: var(--colorBlack2);
+  }
+
+  p{
     text-align: center;
   }
 

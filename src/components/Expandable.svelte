@@ -6,9 +6,9 @@
 
 <div class="container" class:bottom={isBottom}>
   <button onclick={() => expanded =! expanded}>
-    <div class="title">
-      <h2>{@html title}</h2>
-      <h2>{expanded ? "-" : "+"}</h2>
+    <div class="label">
+      <h3>{@html title}</h3>
+      <h3>{expanded ? "-" : "+"}</h3>
     </div>
   </button>
     {#if expanded}
@@ -32,10 +32,14 @@
   .bottom{
     border-bottom: 1px solid var(--colorGrey2);
   }
-  .title{
+  .label{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     user-select: none;
+  }
+  .content{
+    color: var(--colorGrey1);
+    padding: 8px 0px;
   }
 </style>

@@ -23,6 +23,7 @@
     height: auto;
     aspect-ratio: 16/9;
     box-sizing: border-box;
+    padding: 32px;
   }
   iframe {
     border-radius: 16px;

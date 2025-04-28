@@ -97,6 +97,7 @@
     text-align: left;
     font-weight: bold;
     border: 1px solid var(--colorBlack1);
+    color: var(--colorWhite);
   }
   td {
     padding: 10px;
@@ -132,7 +133,6 @@
   .compDate {
     font-weight: 400;
     text-decoration: none;
-    color: var(--colorGrey1);
   }
   .cubing-icon {
     padding: 2px;
@@ -141,5 +141,9 @@
     display: flex;
     flex-wrap: wrap;
     margin: 8px 0px;
+  }
+
+  .eventIconsRow, .compDate, .compName, .venueName{
+    color: var(--colorGrey1);
   }
 </style>

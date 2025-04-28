@@ -21,4 +21,8 @@
     gap: 12px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+  section{
+    padding: 32px 0px;
+  }
+
 </style>

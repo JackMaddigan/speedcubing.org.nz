@@ -50,9 +50,9 @@
 <style>
   .carousel {
     height: calc(100vh - 180px);
-    background-color: var(colorBlack2);
     overflow: hidden;
     position: relative;
+    background-color: var(--colorBlack2);
   }
   img {
     object-fit: cover;

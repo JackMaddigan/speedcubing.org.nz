@@ -3,31 +3,35 @@
 </script>
 
 <section>
-  <a href={link}>
-    <img alt="cuber" src={img} />
-    <div class="textBoxes">
-      <div><h5 class="title">{title}</h5></div>
-      <div><h6 class="text">{text}</h6></div>
-    </div>
-  </a>
+    <a href={link}>
+      <img alt="cuber" src={img} />
+      <div class="textBoxes">
+        <h5>{title}</h5>
+        <p>{text}</p>
+      </div>
+    </a>
 </section>
 
 <style>
   section {
     position: relative;
     transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
   }
-  .title,
-  .text {
+  h5,
+  p {
     margin: auto;
+    text-align: center;
+    padding: 8px;
     background-color: var(--colorBlack3);
     color: white;
   }
-  .title {
+  h5 {
     font-weight: 400;
     width: 40%;
   }
-  .text {
+  p {
     font-weight: 100;
     width: 50%;
   }

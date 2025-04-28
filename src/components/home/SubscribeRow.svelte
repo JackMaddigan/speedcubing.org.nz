@@ -1,6 +1,6 @@
 <script>
   import { supabase } from '$lib/supabase_client';
-  import Button from "../Button.svelte";
+  import ContentColumn from '../ContentColumn.svelte';
 
   let myName = '';
   let myEmail = '';
@@ -40,33 +40,29 @@
 </script>
 
 <section>
-  <div class="container">
-    <h1>SUBSCRIBE</h1>
-    <h4>
+   <ContentColumn>
+    <h1 class="title">SUBSCRIBE</h1>
+    <p>
       Sign up with your email address to receive competition announcements and
       updates about SNZ!
-    </h4>
-    <div class="signup">
-      <form on:submit|preventDefault={handleSubmit}>
-        <div>
-          <input type="text" placeholder="Name" id="name" bind:value={myName} required/>
-          <input type="email" placeholder="Email Address" id="email" bind:value={myEmail} required/>
-        </div>
-
-        {#if !formProcessedOk}
-        <Button type="submit" disabled={loading} text="SIGN UP"></Button>
-        {/if}
-      </form>
-    </div>
-
+    </p>
+  </ContentColumn>
+  <div class="signup">
+    <form on:submit|preventDefault={handleSubmit}>
+        <input type="text" placeholder="Name" id="name" bind:value={myName} required/>
+        <input type="email" placeholder="Email Address" id="email" bind:value={myEmail} required/>
+      {#if !formProcessedOk}
+        <button type="submit" disabled={loading}>SIGN UP</button>
+      {/if}
+    </form>
     <div>
       {#if loading}
-      <h5>SAVING...</h5>
-    {/if}
-  
-    {#if message}
-      <p class={isError ? 'error' : 'success'}>{message}</p>
-    {/if}
+        <h5>SAVING...</h5>
+      {/if}
+    
+      {#if message}
+        <p class={isError ? 'error' : 'success'}>{message}</p>
+      {/if}
     </div>
   </div>
 </section>
@@ -80,19 +76,11 @@
     color: white;
     margin-top: 10px;
   }
-
-  .container {
-    margin: 0 auto;
-    text-align: center;
-    padding: 32px;
-  }
   .signup {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-    padding: 8px;
   }
   input {
     border: none;
@@ -100,12 +88,10 @@
     background: none;
     padding: 8px;
     color: var(--colorGrey2);
-    width: 130px;
   }
-
   input[type="text"] {
-    width: 130;
-  }
+    width: 130px;
+  } 
 
   input[type="email"] {
     width: 250px;
@@ -113,7 +99,9 @@
   
   form {
     display: flex;
+    align-items: center;
     gap: 32px;
+    padding: 16px 8px;
   }
   input:focus {
     outline: none;
@@ -121,11 +109,16 @@
   }
   section {
     background-color: var(--colorBlack2);
+    text-align: center;
   }
+
   @media screen and (max-width: 768px) {
-    form,
-    .signup {
+    form {
       flex-direction: column;
+    }
+    input[type="email"], input[type="text"], button{
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 </style>

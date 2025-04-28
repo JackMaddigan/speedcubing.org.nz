@@ -18,7 +18,6 @@
 
 <style>
   section {
-    padding: 48px 0px;
     display: flex;
     flex-direction: row;
     background-color: var(--colorBlack2);

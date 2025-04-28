@@ -13,7 +13,7 @@
 
 <Header></Header>
 <PageTitle {imagePath} {title}>
-  <h4>
+  <p>
     Competitions are one of the best ways to get involved in speedcubing! Don't
     be fooled by the name - more than anything, these are social events where
     you can get to know other poeple who share the same amazing hobby. Newcomers
@@ -27,7 +27,7 @@
       target="_blank"
       class="blueLink">World Cube Association</a
     >, the governing body for speedcubing worldwide.
-  </h4>
+  </p>
 </PageTitle>
 <CompSection></CompSection>
 <ImageSlider></ImageSlider>

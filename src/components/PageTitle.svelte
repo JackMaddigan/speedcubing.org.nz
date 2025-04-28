@@ -24,14 +24,17 @@
     object-fit: cover;
   }
   .box {
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 32px;
     box-sizing: border-box;
-    text-align: center;
+    /* text-align: center; */
     z-index: 1;
     background-color: rgb(27, 27, 28, 0.8);
     max-width: 600px;
+    min-height: 50vh;
   }
 
-  @media screen and (max-width: 768px) {
-  }
 </style>
