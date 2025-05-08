@@ -6,8 +6,8 @@
     <a href={link}>
       <img alt="cuber" src={img} />
       <div class="textBoxes">
-        <h4>{title}</h4>
-        <h5>{text}</h5>
+        <h3>{title}</h3>
+        <h4>{text}</h4>
       </div>
     </a>
 </section>
@@ -19,8 +19,8 @@
     height: 100%;
     overflow: hidden;
   }
-  h4,
-  h5 {
+  h3,
+  h4 {
     margin: auto;
     text-align: center;
     padding: 8px;
@@ -33,8 +33,10 @@
     transform: translateY(-120%);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px 0px;
     width: 100%;
+    margin: 4px;
   }
   img {
     object-fit: cover;
