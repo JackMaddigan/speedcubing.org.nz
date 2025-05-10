@@ -5,9 +5,9 @@
 <section>
     <a href={link}>
       <img alt="cuber" src={img} />
-      <div class="textBoxes">
+      <div class="box">
         <h3>{title}</h3>
-        <h4>{text}</h4>
+        <p>{text}</p>
       </div>
     </a>
 </section>
@@ -19,33 +19,43 @@
     height: 100%;
     overflow: hidden;
   }
-  h3,
-  h4 {
-    margin: auto;
-    text-align: center;
-    padding: 8px;
-    background-color: var(--colorBlack3);
-    color: white;
+
+  h3{
+    padding: 12px 32px;
   }
-  .textBoxes {
-    position: absolute;
-    transform: translateX(-50%);
-    transform: translateY(-120%);
+
+  p{
+    padding: 8px 16px;
+  }
+
+  .box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px 0px;
-    width: 100%;
-    margin: 4px;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, 0%);
+    position: absolute;
+    bottom: 5%;
+    width: 95%;
+    gap: 8px 0px;
+    left: 50%;
   }
+
+  h3, p {
+    background-color: var(--colorBlack3);
+    color: white;
+    border-radius: 4px;
+  }
+
   img {
     object-fit: cover;
     object-position: center;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     width: 100%;
     height: 100%;
   }
+
   img:hover {
     transform: scale(1.1);
   }

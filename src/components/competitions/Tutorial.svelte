@@ -35,14 +35,14 @@
       <p>
         Want a competition in your area? We're always on the lookout for more keen
         organisers!<br /><br />
-        The most important part is finding a venue that's availalbe on a suitable weekend,
+        The most important part is finding a venue that's available on a suitable weekend,
         and in the right size/price range. You can usually look at past competitions
         to get an idea of the number of competitors you should expect for your area.
-        After that, a good rule of thumb is that a vvenue needs to be 4 square meters
+        After that, a good rule of thumb is that a venue needs to be 4 square meters
         per competitor, and cost no more than $30 per competitor.<br /><br />If
         you think you've found a suitable venue and want to go further, please
         read our
-        <a href="organiser_guide.pdf" class="blueLink">organiser guide</a> to learn
+        <a href="/docs/organiser_guide.pdf" class="blueLink">organiser guide</a> to learn
         more, and contact us with the venue details so we can guide you through the
         rest of the process!
       </p>

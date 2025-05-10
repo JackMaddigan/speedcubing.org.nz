@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>NZ's Best | Speedcubing New Zealand</title>
+</svelte:head>
+
 <script>
   import "../../app.css";
   import Footer from "../../components/Footer.svelte";

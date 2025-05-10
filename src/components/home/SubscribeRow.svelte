@@ -41,7 +41,7 @@
 
 <section>
    <ContentColumn>
-    <h1 class="title">SUBSCRIBE</h1>
+    <h2 class="title">SUBSCRIBE</h2>
     <p>
       Sign up with your email address to receive competition announcements and
       updates about SNZ!
@@ -82,13 +82,16 @@
     justify-content: center;
     align-items: center;
   }
+
   input {
     border: none;
     border-bottom: 1px solid var(--colorGrey2);
     background: none;
     padding: 8px;
     color: var(--colorGrey2);
+    border-radius: 0px;
   }
+
   input[type="text"] {
     width: 130px;
   } 

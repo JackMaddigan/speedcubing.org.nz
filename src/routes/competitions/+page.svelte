@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Competitions | Speedcubing New Zealand</title>
+</svelte:head>
+
 <script>
   import "../../app.css";
   import CompSection from "../../components/competitions/CompSection.svelte";

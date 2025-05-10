@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Getting Started | Speedcubing New Zealand</title>
+</svelte:head>
+
 <script>
   import "../../app.css";
   import ContentColumn from "../../components/ContentColumn.svelte";

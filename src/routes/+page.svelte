@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Home | Speedcubing New Zealand</title>
+</svelte:head>
+
 <script>
 	
   import "../app.css";

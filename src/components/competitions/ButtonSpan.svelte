@@ -35,6 +35,7 @@
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
+    text-align: center;
   }
   @media screen and (max-width: 768px) {
     span {

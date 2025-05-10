@@ -17,16 +17,16 @@
     <section>
       {#if data.current.length}
       <section class="current">
-          <h1>CURRENT COMPETITIONS</h1>
+          <h2>CURRENT COMPETITIONS</h2>
           <CompTable tableType="blue" comps={data.current}></CompTable>
       </section>
       {/if}
       <section class="upcoming">
-        <h1 class="title">UPCOMING COMPETITIONS</h1>
+        <h2 class="title">UPCOMING COMPETITIONS</h2>
         <CompTable tableType="green" comps={data.upcoming}></CompTable>
       </section>
       <section class="recent">
-        <h1 class="title">RECENT COMPETITIONS</h1>
+        <h2 class="title">RECENT COMPETITIONS</h2>
         <CompTable tableType="red" comps={data.recent}></CompTable>
       </section>
       <p>
