@@ -67,8 +67,9 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    max-width: 800px;
-    margin: auto;
+    width: 100%;
     padding: 16px;
+    box-sizing: border-box;
   }
+
 </style>

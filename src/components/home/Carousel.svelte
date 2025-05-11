@@ -10,7 +10,7 @@
     "gallery/gallery5.webp",
     "gallery/gallery6.webp",
     "gallery/gallery7.webp",
-    "gallery/gallery9.webp",
+    "gallery/gallery8.webp",
   ];
   let interval = setInterval(next, 6000);
 

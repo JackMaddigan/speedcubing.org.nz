@@ -35,32 +35,36 @@
 <table>
   <thead class={tableType}>
     <tr>
-      <th>Date</th>
-      <th>Competition</th>
-      <th>Location</th>
+      <th><p>Date</p></th>
+      <th><p>Competition</p></th>
+      <th><p>Location</p></th>
     </tr>
   </thead>
   <tbody>
     {#each comps as comp}
       <tr>
         <td>
-          <span class="compDate">
-            {dateToShort(comp.date.from)}{comp.date.from === comp.date.till
+          <span>
+            <p class="grey">
+              {dateToShort(comp.date.from)}{comp.date.from === comp.date.till
               ? ""
               : `-${dateToShort(comp.date.till)}`}
+            </p>
           </span>
         </td>
         <td>
           <a
             href="https://www.worldcubeassociation.org/competitions/{comp.id}"
             target="blank"
-            class="compName"
-            >{comp.name}
+            >
+            <p class="underline grey">{comp.name}</p>
           </a>
           <span class="eventIconsRow">
-            {#each comp.events.sort((a, b) => eventOrder.indexOf(a) - eventOrder.indexOf(b)) as event}
-              <span class="cubing-icon event-{event}"></span>
-            {/each}
+            <p>
+              {#each comp.events.sort((a, b) => eventOrder.indexOf(a) - eventOrder.indexOf(b)) as event}
+                <span class="cubing-icon event-{event} grey"></span>
+              {/each}
+            </p>
           </span>
           {#if tableType === "green"}
             <RegSpan {comp}></RegSpan>
@@ -74,12 +78,11 @@
           <a
             href="https://www.google.com/maps?q={comp.venue.coordinates
               .latitude},{comp.venue.coordinates.longitude}"
-            class="venueName"
           >
-            {comp.venue.name}
+            <p class="venueName underline grey">{comp.venue.name}</p>
           </a>
           <br />
-          <span class="cityName"><i>{comp.city}</i></span>
+          <span><p class="cityName grey"><i>{comp.city}</i></p></span>
         </td>
       </tr>
     {/each}
@@ -87,15 +90,21 @@
 </table>
 
 <style>
+  a{
+    display: inline;
+  }
   table {
     border-collapse: collapse;
-    width: 100%;
+    table-layout: auto;
+    max-width: 100%;
+    min-width: 60%;
+    width: auto;
+    box-sizing: border-box;
     margin-bottom: 32px;
   }
   th {
     padding: 10px;
     text-align: left;
-    font-weight: bold;
     border: 1px solid var(--colorBlack1);
     color: #fff;
   }
@@ -103,6 +112,10 @@
     padding: 10px;
     text-align: left;
     border: 1px solid var(--colorBlack1);
+  }
+  th, td{
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
   .green {
     background-color: var(--colorGreen1);
@@ -119,27 +132,21 @@
   tbody tr:nth-child(even) {
     background-color: var(--colorCompTable2);
   }
-  .cityName {
-    font-weight: 200;
-    font-size: 0.8em;
-    color: var(--colorGrey1);
-  }
-  .venueName,
-  .compName,
-  .compDate {
-    font-weight: 400;
-    text-decoration: none;
-  }
   .cubing-icon {
     padding: 2px;
   }
   .eventIconsRow {
     display: flex;
     flex-wrap: wrap;
-    margin: 8px 0px;
+    padding-top: 8px;
   }
 
-  .eventIconsRow, .compDate, .compName, .venueName{
+  .underline{
+    text-decoration: underline;
+  }
+
+  .grey{
     color: var(--colorGrey1);
   }
+
 </style>

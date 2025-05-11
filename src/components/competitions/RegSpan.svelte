@@ -26,15 +26,18 @@
 </script>
 
 <a
-  class="reg-link"
   href={comp.externalWebsite || `https://www.worldcubeassociation.org/competitions/${comp.id}/register`}
-  target="blank">{regMessage}</a
->
+  target="_blank">
+  <h4 class="reg-link">{regMessage}</h4>
+</a>
 
 <style>
   .reg-link {
-    text-decoration: none;
-    font-size: 12px;
+    color: var(--colorGreen1);
+    padding-top: 8px;
+  }
+  a{
+    text-decoration: underline;
     color: var(--colorGreen1);
   }
 </style>

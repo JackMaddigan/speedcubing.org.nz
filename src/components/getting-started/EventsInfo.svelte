@@ -1,5 +1,5 @@
 <script>
-  import Expandable from "../../components/Expandable.svelte";
+  import Expandable from "../Expandable.svelte";
 </script>
 
 <section>

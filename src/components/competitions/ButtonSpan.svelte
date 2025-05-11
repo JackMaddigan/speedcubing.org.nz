@@ -9,7 +9,7 @@
       href="https://live.worldcubeassociation.org/link/competitions/{compId}"
       target="_blank"
     >
-      LIVE RESULTS
+      <p>LIVE RESULTS</p>
     </a>
   {/if}
   {#if groups}
@@ -18,7 +18,7 @@
       href="https://www.competitiongroups.com/competitions/{compId}"
       target="_blank"
     >
-      GROUPS
+      <p>GROUPS</p>
     </a>
   {/if}
 </span>
@@ -34,7 +34,6 @@
     padding: 8px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
     text-align: center;
   }
   @media screen and (max-width: 768px) {

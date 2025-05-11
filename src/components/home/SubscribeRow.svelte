@@ -90,6 +90,7 @@
     padding: 8px;
     color: var(--colorGrey2);
     border-radius: 0px;
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
   }
 
   input[type="text"] {

@@ -15,9 +15,9 @@
     </button>
 
     <div class="nav" class:open={menuOpen}>
-      <a href="./start">GETTING STARTED</a>
+      <a href="./getting-started">GETTING STARTED</a>
       <a href="./competitions">COMPETITIONS</a>
-      <!-- <a href="./nzs-best">NZ'S BEST</a> -->
+      <a href="./nzs-best">NZ'S BEST</a>
       <a href="./about">ABOUT</a>
       <a href="./faq">FAQ</a>
       <a href="./contact">CONTACT</a>
@@ -61,7 +61,8 @@
   }
 
   .nav a {
-    font-weight: 300;
+    font-weight: 400;
+    font-family: 'Spartan MB', sans-serif;
     font-size: clamp(1rem, 1vw, 1.5rem);
     padding: clamp(12px, 2vw, 20px);
     text-decoration: none;
