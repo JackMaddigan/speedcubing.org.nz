@@ -12,14 +12,21 @@
     "gallery/gallery7.webp",
     "gallery/gallery8.webp",
   ];
-  // let interval = setInterval(next, 6000);
+  let interval = setInterval(next, 5000);
 
   function next() {
     index = (index + 1) % imgSrcs.length;
+    resetInterval();
   }
 
   function prev() {
     index = (index - 1 + imgSrcs.length) % imgSrcs.length;
+    resetInterval();
+  }
+
+  function resetInterval(){
+    clearInterval(interval);
+    interval = setInterval(next, 5000);
   }
 
   $: offset = `translateX(-${index * 100}%)`;
