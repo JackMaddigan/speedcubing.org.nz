@@ -10,7 +10,7 @@
   })
 </script>
 
-<section class="container">
+<section class="container" id="competitions">
   {#if !data}
     <div class="loading">Loading Competitions...</div>
   {:else}

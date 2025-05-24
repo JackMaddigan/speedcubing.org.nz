@@ -2,7 +2,7 @@
   import Expandable from "../Expandable.svelte";
 </script>
 
-<section>
+<section id="events_info">
   <Expandable title="<span class='cubing-icon event-333'></span> 3x3 CUBE">
     Nothing here yet
   </Expandable>

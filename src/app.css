@@ -53,6 +53,10 @@ body{
   background-color: var(--colorBlack3);
 }
 
+html{
+  scroll-padding-top: 100px;
+}
+
 input, textarea{
   font-family: "Calibri", sans-serif;
   font-size: clamp(1.1rem, 1.4vw, 1.43rem);

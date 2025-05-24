@@ -57,7 +57,7 @@
       >here</a
       >.
     </p>
-    <h2 class="title">CUBE CLUBS</h2>
+    <h2 class="title" id="clubs">CUBE CLUBS</h2>
     <p>In addition to official SNZ-run competitions, there are several unofficial cube clubs around 
       New Zealand. These are not associated with SNZ, but can be a great way to get to get to know 
       other cubers, without the pressure of an official competition. Find your nearest club here:</p>

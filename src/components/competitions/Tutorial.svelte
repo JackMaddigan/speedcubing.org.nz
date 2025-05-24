@@ -5,7 +5,7 @@
 
 <section>
     <ContentColumn>
-      <h2 class="title">YOUR FIRST COMPETITION</h2>
+      <h2 class="title" id="your_first_competition">YOUR FIRST COMPETITION</h2>
       <p>
         Before the competition we'll send you an email with all the information
         you need to know. We'll also run a tutorial for new competitors on
@@ -31,7 +31,7 @@
       </p>
       <br />
       <br />
-      <h2 class="title">ORGANISING A COMPETITION</h2>
+      <h2 class="title" id="organising">ORGANISING A COMPETITION</h2>
       <p>
         Want a competition in your area? We're always on the lookout for more keen
         organisers!<br /><br />

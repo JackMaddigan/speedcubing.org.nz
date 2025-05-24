@@ -8,11 +8,11 @@
   <button onclick={() => expanded =! expanded}>
     <div class="label">
       <h3>{@html title}</h3>
-      <p>{expanded ? "-" : "+"}</p>
+      <h3 class="plus">{expanded ? "-" : "+"}</h3>
     </div>
   </button>
     {#if expanded}
-      <div class="content" transition:slide={{duration: 150}}>
+      <div class="content" transition:slide={{duration: 150}}>   <!-- transition:slide={{duration: 150}} -->
         {@render children()}
       </div>
     {/if}
@@ -20,7 +20,9 @@
 
 <style>
   h3 {
-    font-weight: 400;
+    /* font-size: clamp(1.6rem, 1.6vw, 2rem); */
+    font-weight: 300;
+    transition: color 0.3s ease;
   }
   button {
     all: unset;
@@ -30,7 +32,6 @@
   }
   .container{
     border-top: 1px solid var(--colorGrey2);
-    background-color: var(--colorCompTable2);
   }
   .bottom{
     border-bottom: 1px solid var(--colorGrey2);
@@ -40,12 +41,16 @@
     flex-direction: row;
     justify-content: space-between;
     user-select: none;
-    padding: 8px;
+    padding: 12px 8px;
+    transition: background-color 0.3s ease;
   }
   .content{
     color: var(--colorGrey1);
-    padding: 8px 0px;
-    padding: 8px;
-    background-color: var(--colorBlack2);
+    padding: 16px 8px 32px 8px;
+  }
+  .plus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
