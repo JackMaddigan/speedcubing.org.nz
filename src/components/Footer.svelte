@@ -4,16 +4,16 @@
 
 <section>
   <div class="socials">
-    <a href="https://facebook.com/SpeedcubingNZ" aria-label="facebook">
-      <i class="bi bi-envelope-fill icon"></i></a
+    <a href="mailto:info@speedcubing.org.nz" aria-label="email">
+      <i class="bi bi-envelope icon"></i></a
     >
-    <a href="https://instagram.com/SpeedcubingNZ" aria-label="instagram">
+    <a href="https://instagram.com/SpeedcubingNZ" aria-label="instagram" target="_blank">
       <i class="bi bi-instagram icon"></i></a
     >
-    <a href="https://instagram.com/SpeedcubingNZ" aria-label="instagram">
+    <a href="https://facebook.com/SpeedcubingNZ" aria-label="facebook" target="_blank">
       <i class="bi bi-facebook icon"></i></a
     >
-    <a href="https://instagram.com/SpeedcubingNZ" aria-label="instagram">
+    <a href="https://youtube.com/SpeedcubingNZ" aria-label="youtube" target="_blank">
       <i class="bi bi-youtube icon"></i></a
     >
   </div>
