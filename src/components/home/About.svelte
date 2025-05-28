@@ -15,7 +15,7 @@
           levels.
         </p>
         <div class="btn">
-          <button link="/">ABOUT US</button>
+          <button onclick={() => window.location.href="./about"}>ABOUT US</button>
         </div>
       </div>
     </ContentColumn>
