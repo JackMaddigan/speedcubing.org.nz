@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
   }
-  label, input, textarea{
+  label, input[type="text"], input[type="email"], textarea{
     font-size: clamp(1rem, 1.2vw, 1.3rem);
     font-weight: 300;
   }
@@ -78,7 +78,7 @@
     color: var(--colorGrey1);
     padding: 8px 0px 8px 0px;
   }
-  input, textarea{
+  input[type="text"], input[type="email"], textarea{
     background-color: var(--colorCompTable1);
     border: 1px solid var(--colorBlack1);
     color: #fff;
@@ -92,7 +92,7 @@
   }
   input[type="submit"]{
     margin-top: 16px;
-    padding: 4px 16px;
+    /* padding: 4px 16px; */
     align-self: flex-start;
     width: auto;
   }
@@ -100,21 +100,6 @@
     color: var(--colorRed1);
   }
 
-  .btn {
-    font-weight: 400;
-    background: none;
-    color: var(--colorGrey1);
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 0px;
-  }
-
-  .btn:hover {
-    transition: color 0.3s ease;
-    transition: background-color 0.3s ease;
-    background-color: var(--colorGrey1);
-    color: var(--colorBlack3);
-  }
   @media screen and (max-width: 768px){
     section{
       width: 100%;

@@ -106,7 +106,7 @@ p {
   color: var(--colorBlue1);
 }
 
-button {
+button, .btn {
   font-weight: 300;
   font-size: clamp(1.1rem, 1.4vw, 1.43rem);
   border: 1px solid var(--colorGrey1);
@@ -117,7 +117,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover, .btn:hover {
   transition: color 0.3s ease;
   transition: background-color 0.3s ease;
   background-color: var(--colorGrey1);
