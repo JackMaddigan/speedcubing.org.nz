@@ -90,7 +90,7 @@
             <div class="col4">
               <EventIconsRow events={comp.events}></EventIconsRow>
             </div>
-            {#if comp.regClosed}
+            {#if comp.regClosed || type==="current"}
               <div class="col4">
                 <ActionRow {comp}></ActionRow>
               </div>
