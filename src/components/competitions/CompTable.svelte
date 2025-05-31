@@ -129,7 +129,7 @@
     flex-direction: column;
     padding: 8px 8px;
     box-sizing: border-box;
-    justify-content: center;
+    /* justify-content: center; */
   }
   .col1 {
     width: 40%;
