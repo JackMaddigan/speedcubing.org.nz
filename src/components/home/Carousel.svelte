@@ -1,5 +1,6 @@
 <script>
   import "bootstrap-icons/font/bootstrap-icons.css";
+  import { onMount } from "svelte";
   let slides;
   let index = 0;
   const imgSrcs = [
@@ -29,10 +30,16 @@
   }
 
   $: offset = `translateX(-${index * 100}%)`;
+  let carousel;
+
+  onMount(() => {
+    if(window.innerWidth <= 768){ carousel.style.height = `calc(${window.innerHeight}px - 280px)`}
+    else { carousel.style.height = `calc(${window.innerHeight}px - 180px)`; }
+  })
 </script>
 
-<div class="carousel">
-  <div class="slides" style="transform: {offset};">
+<div class="carousel" bind:this={carousel}>
+  <div class="slides" style:transform={offset}>
     {#each imgSrcs as src}
       <img src={src} alt="">
     {/each}
@@ -48,11 +55,11 @@
 
 <style>
   .carousel {
-    height: calc(100vh - 180px);
     overflow: hidden;
     position: relative;
     background-color: var(--colorBlack2);
     touch-action: manipulation;
+    height: calc(100vh - 180px); /* will get overridden by onmount, but as default this is good */
   }
 
   .slides{
@@ -89,7 +96,7 @@
 
   @media screen and (max-width: 768px){
     .carousel {
-      height: calc(100vh - 280px);
+      height: calc(100vh - 280px); /* will get overridden by onmount but as default this is good */
     }
   }
 </style>
