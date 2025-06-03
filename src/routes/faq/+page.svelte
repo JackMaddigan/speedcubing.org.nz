@@ -203,7 +203,7 @@
       padding: 24px 16px;
     }
     a{
-      text-decoration: underline;
+      text-decoration: none;
       color: var(--colorBlue1);
     }
 </style>

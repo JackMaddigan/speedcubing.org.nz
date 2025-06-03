@@ -22,7 +22,7 @@
   <div>
     <ImageCard
       img="image_row/team_nz.webp"
-      title="TOP CUBERS"
+      title="NZ'S BEST"
       text="New Zealand has some of the best speedcubers in the world!"
       link="/nzs-best"
     ></ImageCard>

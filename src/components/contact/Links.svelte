@@ -12,7 +12,6 @@
     class="blueLink" target="_blank" aria-label="form">WCA Contact Form</a> to reach that competition's organisers. 
     Alternatively, you can reach us through the social media channels 
     at the bottom of the page.</p>
-    <p><i class="bi bi-envelope"></i> <a href="mailto:info@speedcubing.org.nz">info@speedcubing.org.nz</a></p>
 </section>
 
 <style>

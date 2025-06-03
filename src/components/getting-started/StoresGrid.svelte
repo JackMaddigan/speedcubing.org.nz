@@ -1,11 +1,11 @@
 
 <section>
   <div class="container">
-    <a href="https://speedcube.co.nz">
-      <img src="getting_started/stores/speedcubenz_banner.png" alt="speedcube.co.nz">
+    <a href="https://speedcube.co.nz" class="speedcubenz">
+      <img src="getting_started/stores/speedcubenz_banner.webp" alt="speedcube.co.nz">
     </a>
-    <a href="https://mindplay.nz">
-      <img src="getting_started/stores/mindplay_banner.png" alt="mindplay.nz">
+    <a href="https://mindplay.nz" class="mindplay">
+      <img src="getting_started/stores/mindplay_banner.webp" alt="mindplay.nz">
     </a>
   </div>
 </section>
@@ -16,13 +16,27 @@
     gap: 12px;
     padding: 24px 0px;
   }
-  img{
+
+  a {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    height: 130px;
+    background-color: red;
     border-radius: 8px;
   }
-  a{
-    height: 130px;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .mindplay {
+    background-color: #1193cd;
+  }
+
+  .speedcubenz {
+    background-color: #fff;
   }
 </style>
