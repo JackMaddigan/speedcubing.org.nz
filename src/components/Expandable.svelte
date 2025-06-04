@@ -20,9 +20,7 @@
 
 <style>
   h3 {
-    /* font-size: clamp(1.6rem, 1.6vw, 2rem); */
     font-weight: 300;
-    transition: color 0.3s ease;
   }
   button {
     all: unset;

@@ -3,13 +3,13 @@
 
   const imgSrcs = [
     "gallery/c1.webp",
-    "gallery/c2.webp",
-    "gallery/c3.webp",
+    "gallery/c8.webp",
     "gallery/c4.webp",
     "gallery/c5.webp",
-    "gallery/c6.webp",
     "gallery/c7.webp",
-    "gallery/c8.webp",
+    "gallery/c2.webp",
+    "gallery/c3.webp",
+    "gallery/c6.webp",
     "gallery/c9.webp",
   ];
 
