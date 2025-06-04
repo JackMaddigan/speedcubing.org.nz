@@ -3,15 +3,15 @@
   import { tick } from "svelte";
 
   const imgSrcs = [
-    "gallery/Carousel 1.webp",
-    "gallery/Carousel 4.webp",
-    "gallery/Carousel 5.webp",
-    "gallery/Carousel 8.webp",
-    "gallery/Carousel 6.webp",
-    "gallery/Carousel 2.webp",
-    "gallery/Carousel 3.webp",
-    "gallery/Carousel 7.webp",
-    "gallery/Carousel 9.webp",
+    "gallery/carousel_1.webp",
+    "gallery/carousel_2.webp",
+    "gallery/carousel_5.webp",
+    "gallery/carousel_8.webp",
+    "gallery/carousel_6.webp",
+    "gallery/carousel_2.webp",
+    "gallery/carousel_3.webp",
+    "gallery/carousel_7.webp",
+    "gallery/carousel_9.webp",
   ];
 
   let interval = setInterval(next, 5000);
