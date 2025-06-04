@@ -1,6 +1,5 @@
 <script>
   import "bootstrap-icons/font/bootstrap-icons.css";
-  import { tick } from "svelte";
 
   const imgSrcs = [
     "gallery/carousel_1.webp",
