@@ -102,11 +102,11 @@
           <!-- Events list and action row for mobile -->
           {#if (width <= 768)}
             <div class="col4">
-              <EventIconsRow events={comp.events}></EventIconsRow>
+              <CompEvents events={comp.events}></CompEvents>
             </div>
             {#if comp.regClosed || type==="current"}
               <div class="col4">
-                <ActionRow {comp}></ActionRow>
+                <CompActions {comp}></CompActions>
               </div>
             {/if}
           {/if}

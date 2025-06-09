@@ -3,7 +3,6 @@
   import "bootstrap-icons/font/bootstrap-icons.css";
 
   let menuOpen = false;
-
   afterNavigate(() => {
     menuOpen = false;
   });

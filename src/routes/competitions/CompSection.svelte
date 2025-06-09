@@ -9,9 +9,9 @@
   import { onMount } from "svelte";
 
   let data;
-
   onMount(async () => {
     data = await loadCompetitions();
+    // alert(JSON.stringify(data).slice(0, 100));
   })
 </script>
 
