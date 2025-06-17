@@ -374,26 +374,5 @@
       "pyram"
     ],
     "date_range": "May 31, 2025"
-  },
-  {
-    "id": "MoreCubesKarori2025",
-    "name": "More Cubes Karori 2025",
-    "venue": "Karori Arts & Crafts Centre",
-    "city": "Wellington",
-    "registration_open": "2025-04-19T06:00:00.000Z",
-    "registration_close": "2025-05-12T11:59:00.000Z",
-    "start_date": "2025-05-18",
-    "end_date": "2025-05-18",
-    "website": "https://www.worldcubeassociation.org/competitions/MoreCubesKarori2025",
-    "latitude_degrees": -41.285298,
-    "longitude_degrees": 174.737983,
-    "event_ids": [
-      "333bf",
-      "333fm",
-      "444bf",
-      "555bf",
-      "333mbf"
-    ],
-    "date_range": "May 18, 2025"
   }
 ]
