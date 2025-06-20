@@ -8,6 +8,7 @@
 
   import BioCarousel from "./BioCarousel.svelte";
   import Records from "./Records.svelte";
+  import Champions from "./champions/Champions.svelte";
 
   const title = "NZ'S BEST";
   const imagePath = "/nzs-best/title-bg.webp";
@@ -27,3 +28,5 @@
 
 <h2>CUBER BIOS</h2>
 <BioCarousel></BioCarousel>
+
+<Champions></Champions>

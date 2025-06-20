@@ -1,6 +1,7 @@
 import fs from "fs";
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { centiToDisplay, decodeMbldResult } from "../helpers.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const filePath = path.join(__dirname, '../data/records.json');
@@ -88,54 +89,5 @@ async function getName(wcaId){
   if(!response.ok){ throw new Error("Bad response!"); }
   return (await response.json()).name;
 }
-
-function centiToDisplay(centi, removeDecimals = false) {
-  if (centi == -1) return "DNF";
-  if (centi == -2) return "DNS";
-  if (centi == 0) return "N/A";
-  const hours = Math.floor(centi / 360000);
-  const minutes = Math.floor((centi - hours * 360000) / 6000);
-  const seconds = Math.floor((centi - hours * 360000 - minutes * 6000) / 100);
-  const centiseconds =
-    centi - (hours * 360000 + minutes * 6000 + seconds * 100);
-  let stringCentiseconds =
-    centiseconds < 10 ? ".0" + centiseconds : "." + centiseconds;
-  let stringSeconds =
-    (minutes > 0 || hours > 0) && seconds < 10
-      ? "0" + seconds + ""
-      : seconds + "";
-  let stringMinutes =
-    hours > 0 && minutes < 10
-      ? "0" + minutes + ":"
-      : minutes == 0
-      ? ""
-      : minutes + ":";
-  let stringHours = hours > 0 ? hours + ":" : "";
-  return (
-    stringHours +
-    stringMinutes +
-    stringSeconds +
-    (removeDecimals ? "" : stringCentiseconds)
-  );
-}
-
-/**
- * Decodes WCA MBLD integer
- * @param {integer} value WCA standard MBLD result
- * @returns string of attempt
- */
-function decodeMbldResult(value) {
-  // 0DDTTTTTMM
-  //   get MM
-  const unsolved = value % 100;
-  // solved = difference + missed
-  const solved = 99 - Math.floor(value / 1e7) + unsolved;
-  // seconds is TTTTT so get rid of MM first then get rid of DD
-  const seconds = Math.floor(value / 100) % 1e5;
-
-  return `${solved}/${solved + unsolved} ${centiToDisplay(seconds*100, true)}`;
-}
-
-
 
 run();

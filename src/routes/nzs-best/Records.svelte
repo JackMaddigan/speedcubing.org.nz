@@ -4,11 +4,7 @@
   import ContentColumn from "$lib/components/ContentColumn.svelte";
   import records from "$lib/data/records.json";
   import RecordTableRow from "./RecordTableRow.svelte";
-   const eventOrder = ["333","222","444","555","666","777","333bf","333fm","333oh",
-   "clock","minx","pyram","skewb","sq1","444bf","555bf","333mbf"];
-   const eventNames = ["3x3 CUBE", "2x2 CUBE", "4x4 CUBE", "5x5 CUBE", "6x6 CUBE", "7x7 CUBE", 
-   "3x3 BLINDFOLDED", "3x3 FEWEST MOVES", "3x3 ONE-HANDED", "CLOCK", "MEGAMINX", "PYRAMINX", "SKEWB", 
-   "SQUARE-1", "4x4 BLINDFOLDED", "5x5 BLINDFOLDED", "3x3 MULTI-BLIND"];
+  import {eventOrder, eventNames} from "$lib/helpers.js";
   const events = Object.entries(records).sort((a, b) => eventOrder.indexOf(a[0]) - eventOrder.indexOf(b[0]))
 </script>
 
