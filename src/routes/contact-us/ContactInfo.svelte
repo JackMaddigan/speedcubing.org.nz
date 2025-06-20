@@ -17,7 +17,7 @@
 <style>
   section{
     padding-top: 16px;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

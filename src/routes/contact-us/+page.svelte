@@ -12,23 +12,7 @@
 </script>
 
 <ContentColumn>
-  <h2>CONTACT US</h2>
-  <div class="row">
+    <h2>CONTACT US</h2>
     <ContactInfo></ContactInfo>
     <Form></Form>
-  </div>
 </ContentColumn>
-
-<style>
-  .row{
-    display: flex;
-    flex-direction: row;
-    min-height: calc(100vh - 320px);
-    gap: 60px;
-  }
-  @media screen and (max-width: 768px){
-    .row{
-      flex-direction: column;
-    }
-  }
-</style>
