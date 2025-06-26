@@ -39,11 +39,11 @@ async function getComps(pageCounter, thirtyDaysBeforeNow){
 
 const pickProps = ({
   id, name, venue, city, registration_open, registration_close,
-  start_date, end_date, website, latitude_degrees,
+  start_date, end_date, website, url, latitude_degrees,
   longitude_degrees, event_ids, date_range
 }) => ({
   id, name, venue, city, registration_open, registration_close,
-  start_date, end_date, website, latitude_degrees,
+  start_date, end_date, website, url, latitude_degrees,
   longitude_degrees, event_ids, date_range
 });
 
