@@ -291,56 +291,5 @@
       "skewb"
     ],
     "date_range": "Jul 5 - 6, 2025"
-  },
-  {
-    "id": "WellingtonWinter2025",
-    "name": "Wellington Winter 2025",
-    "venue": "[Wellington Bridge Club](https://wellingtonbridge.co.nz/)",
-    "city": "Wellington",
-    "registration_open": "2025-05-02T05:00:00.000Z",
-    "registration_close": "2025-06-16T11:59:00.000Z",
-    "start_date": "2025-06-21",
-    "end_date": "2025-06-21",
-    "website": "https://www.worldcubeassociation.org/competitions/WellingtonWinter2025",
-    "url": "https://www.worldcubeassociation.org/competitions/WellingtonWinter2025",
-    "latitude_degrees": -41.269741,
-    "longitude_degrees": 174.78019,
-    "event_ids": [
-      "333",
-      "222",
-      "444",
-      "555",
-      "333oh",
-      "clock",
-      "minx",
-      "pyram",
-      "skewb",
-      "sq1",
-      "333mbf"
-    ],
-    "date_range": "Jun 21, 2025"
-  },
-  {
-    "id": "TwistyTeRaekura2025",
-    "name": "Twisty Te Raekura 2025",
-    "venue": "Te Raekura Redcliffs School",
-    "city": "Christchurch",
-    "registration_open": "2025-05-23T00:00:00.000Z",
-    "registration_close": "2025-06-14T00:00:00.000Z",
-    "start_date": "2025-06-21",
-    "end_date": "2025-06-21",
-    "website": "https://www.worldcubeassociation.org/competitions/TwistyTeRaekura2025",
-    "url": "https://www.worldcubeassociation.org/competitions/TwistyTeRaekura2025",
-    "latitude_degrees": -43.556806,
-    "longitude_degrees": 172.733343,
-    "event_ids": [
-      "333",
-      "222",
-      "444",
-      "333oh",
-      "clock",
-      "pyram"
-    ],
-    "date_range": "Jun 21, 2025"
   }
 ]
