@@ -14,6 +14,7 @@
     {name: "Caleb Hall", roles: "WCA Junior Delegate", src: "caleb.jpg"},
     {name: "Jack Maddigan", roles: "WCA Junior Delegate", src: "jack.jpg"},
     {name: "James Dyer", roles: "WCA Trainee Delegate", src: "james-d.jpg"},
+    {name: "Nick Ng", roles: "WCA Trainee Delegate", src: "Nick.png"},
   ]
 </script>
 
