@@ -31,12 +31,8 @@ function status(comp){
   // recent | upcoming | current
   const whenStatus = comp.end_date < todayYMD ? "recent" : comp.start_date > todayYMD ? "upcoming" : "current";
 
-  // Use these to help determine the registration status of the comp
-  const onlineRegClosed = now >= regClosesDate;
-  const regNotOpenYet = now < regOpensDate;
-
   // ots | closed | future | open
-  const regStatus = onlineRegClosed ? (comp.ots ? "ots" : "closed") : regOpensDate > now ? "future" : "open";
+  const regStatus = now >= regClosesDate ? (comp.ots ? "ots" : "closed") : now < regOpensDate ? "future" : "open";
 
   // Show actions buttons if current/upcoming and online reg is closed
   const showActions = ["current", "upcoming"].includes(whenStatus) && ["ots", "closed"].includes(regStatus);
