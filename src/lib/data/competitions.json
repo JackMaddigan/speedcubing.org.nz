@@ -313,38 +313,5 @@
       "clock"
     ],
     "date_range": "Aug 16, 2025"
-  },
-  {
-    "id": "NZNorthIslandChampionship2025",
-    "name": "NZ North Island Championship 2025",
-    "venue": "Community Leisure Centre",
-    "city": "Palmerston North",
-    "registration_open": "2024-12-03T05:00:00.000Z",
-    "registration_close": "2025-07-07T11:59:00.000Z",
-    "start_date": "2025-07-11",
-    "end_date": "2025-07-13",
-    "website": "https://speedcubing.nz/competitions/NZNorthIslandChampionship2025",
-    "url": "https://www.worldcubeassociation.org/competitions/NZNorthIslandChampionship2025",
-    "latitude_degrees": -40.352527,
-    "longitude_degrees": 175.62849,
-    "event_ids": [
-      "333",
-      "222",
-      "444",
-      "555",
-      "666",
-      "777",
-      "333bf",
-      "333oh",
-      "clock",
-      "minx",
-      "pyram",
-      "skewb",
-      "sq1",
-      "444bf",
-      "555bf",
-      "333mbf"
-    ],
-    "date_range": "Jul 11 - 13, 2025"
   }
 ]
