@@ -1,10 +1,10 @@
 
 <section>
   <div class="container">
-    <a href="https://speedcube.co.nz" class="speedcubenz">
+    <a href="https://speedcube.co.nz" class="speedcubenz" target="_blank">
       <img src="getting-started/stores/speedcubenz-banner.webp" alt="speedcube.co.nz">
     </a>
-    <a href="https://mindplay.nz" class="mindplay">
+    <a href="https://mindplay.nz" class="mindplay" target="_blank">
       <img src="getting-started/stores/mindplay-banner.webp" alt="mindplay.nz">
     </a>
   </div>
