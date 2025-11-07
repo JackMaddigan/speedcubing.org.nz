@@ -84,7 +84,7 @@
       {
         "personId": "2019RAMO05",
         "eventId": "666",
-        "best": "1:21.56",
+        "best": "1:21.22",
         "name": "Dwyane Ramos",
         "link": ""
       }
@@ -93,7 +93,7 @@
       {
         "personId": "2019RAMO05",
         "eventId": "666",
-        "best": "1:25.88",
+        "best": "1:25.34",
         "name": "Dwyane Ramos",
         "link": ""
       }
@@ -102,19 +102,19 @@
   "777": {
     "single": [
       {
-        "personId": "2019RAMO05",
+        "personId": "2021EYLE01",
         "eventId": "777",
-        "best": "2:09.08",
-        "name": "Dwyane Ramos",
+        "best": "2:05.47",
+        "name": "Henry Eyles",
         "link": ""
       }
     ],
     "average": [
       {
-        "personId": "2019RAMO05",
+        "personId": "2021EYLE01",
         "eventId": "777",
-        "best": "2:13.36",
-        "name": "Dwyane Ramos",
+        "best": "2:09.74",
+        "name": "Henry Eyles",
         "link": ""
       }
     ]
