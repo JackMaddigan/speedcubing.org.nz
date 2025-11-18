@@ -11,6 +11,10 @@
   }
 </script>
 
+<h1>KINCH RANKS</h1>
+
+<p class="kinch-yapping">Countries are ranked with a system called "Kinch ranks"</p>
+
 <div class="table-wrapper">
   <table>
     <thead>
@@ -41,23 +45,74 @@
   </table>
 </div>
 
+<br>
+
+<p class="kinch-yapping">More rows can be found <a href="https://wca.cuber.pro/" target="_blank">here</a>.</p>
+
 <style>
-  body { font-family: Arial, sans-serif; margin:20px; background:#121212; color:#fff; }
+  body { 
+    font-family: Arial, sans-serif; 
+    margin:20px; 
+    background:#121212; 
+    color:#fff; 
+  }
+
+  .kinch-yapping {
+    margin-top: 40px;
+    text-align: center;
+
+  }
 
   .table-wrapper {
     overflow-x: auto;
+    margin-top: 20px;
     -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   }
 
-  table { border-collapse: collapse; width: 100%; background:#1c1c1c; box-shadow:0 2px 8px rgba(0,0,0,0.3); min-width: 800px; }
-  th, td { border:1px solid #333; padding:6px 8px; text-align:center; font-size:13px; color:#fff; }
-  th { background-color:#46b04c; color:white; position:sticky; top:0; }
-  tr:nth-child(even){ background:#262626; }
-  td:first-child, th:first-child{ text-align:right; }
-  td:nth-child(2), th:nth-child(2){ text-align:left; }
-  img { vertical-align: middle; }
-  tr.highlight-nz { background:#333 !important; font-weight:bold; }
-  th:nth-child(-n+3), td:nth-child(-n+3) { font-weight: bold; }
+  table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    background:#1c1c1c; 
+    box-shadow:0 2px 8px rgba(0,0,0,0.3); 
+    min-width: 800px; 
+  }
+
+  th, td { 
+    border:1px solid #333; 
+    padding:6px 8px; 
+    text-align:center; 
+    font-size:13px; 
+    color:#fff; }
+
+  th { 
+    background-color:#46b04c; 
+    color:white; 
+    position:sticky; 
+    top:0; }
+
+  tr:nth-child(even){ 
+    background:#262626; 
+  }
+
+  td:first-child, th:first-child{ 
+    text-align:right; 
+  }
+
+  td:nth-child(2), th:nth-child(2){ 
+    text-align:left; 
+  }
+
+  img { 
+    vertical-align: middle; 
+  }
+
+  tr.highlight-nz { 
+    background:#333 !important; font-weight:bold; 
+  }
+
+  th:nth-child(-n+3), td:nth-child(-n+3) { 
+    font-weight: bold; 
+  }
 
   /* Cubing icon styles */
   .cubing-icon {
