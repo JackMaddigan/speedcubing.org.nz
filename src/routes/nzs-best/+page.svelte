@@ -11,8 +11,6 @@
   import Champions from "./champions/Champions.svelte";
   import KinchTable from "./kinch/KinchTable.svelte";
 
-  export let data; // injected from +page.server.js
-
   const title = "NZ'S BEST";
   const imagePath = "/nzs-best/title-bg.webp";
 </script>
@@ -31,4 +29,6 @@
 <h2>CUBER BIOS</h2>
 <BioCarousel />
 <Champions />
-<KinchTable kinchData={data.kinchData} />
+
+<!-- KinchTable loads its own JSON -->
+<KinchTable />
