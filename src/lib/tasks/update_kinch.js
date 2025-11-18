@@ -1,59 +1,90 @@
+// src/lib/tasks/update_kinch.js
 import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
+import { fileURLToPath } from "url";
+import path from "path";
 
-const URL = "https://wca.cuber.pro/kinch-rankings"; // real URL
-
+// Map full event names to codes
 const eventMap = {
   "3x3": "333",
   "2x2": "222",
-  "4x4": "444",
-  "5x5": "555",
-  "6x6": "666",
-  "7x7": "777",
   "3x3 Blindfolded": "333bf",
   "3x3 One-Handed": "333oh",
   "3x3 Fewest Moves": "333fm",
+  "3x3 Multi-Blind": "333mbf",
+  "4x4": "444",
+  "4x4 Blindfolded": "444bf",
+  "5x5": "555",
+  "5x5 Blindfolded": "555bf",
+  "6x6": "666",
+  "7x7": "777",
   "Clock": "clock",
   "Megaminx": "minx",
   "Pyraminx": "pyram",
   "Skewb": "skewb",
-  "Square-1": "sq1",
-  "4x4 Blindfolded": "444bf",
-  "5x5 Blindfolded": "555bf",
-  "3x3 Multi-Blind": "333mbf",
-
-
+  "Square-1": "sq1"
 };
 
-async function scrape() {
-  const { data } = await axios.get(URL);
-  const $ = cheerio.load(data);
+// Scrape the site and return structured JSON
+async function scrapeKinchJSON() {
+  const url = "https://wca.cuber.pro/";
 
-  const countries = [];
-
-  $("table tbody tr").each((i, row) => {
-    const tds = $(row).find("td");
-
-    const rank = parseInt($(tds[0]).text().trim(), 10);
-    const country = $(tds[1]).text().trim();
-    const flag = $(tds[1]).find("img").attr("src");
-    const overall = parseFloat($(tds[2]).text().trim()); // 3rd column is overall
-
-    const scores = {};
-    Object.keys(eventMap).forEach((eventName, idx) => {
-      const code = eventMap[eventName];
-      scores[code] = parseFloat($(tds[idx + 3]).text().trim()); // events start at 4th td
-    });
-
-    countries.push({ country, rank, flag, overall, scores });
+  const { data: html } = await axios.get(url, {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    },
+    timeout: 20000,
   });
 
-  fs.writeFileSync(
-    "./src/lib/data/kinch.json",
-    JSON.stringify(countries, null, 2)
-  );
+  const $ = cheerio.load(html);
+  const countries = [];
 
+  $("table tbody tr").each((_, tr) => {
+    const children = $(tr).children();
+
+    const rank = parseInt($(children[0]).text().trim(), 10);
+
+    const countryTd = $(children[1]);
+    const countryName = countryTd.find("span").text().trim();
+    const flagClass = countryTd.find("i.flag").attr("class") || "";
+    const flagMatch = flagClass.match(/flag-([a-z]{2})/i);
+    const flag = flagMatch
+      ? `https://twemoji.maxcdn.com/v/latest/72x72/${[...flagMatch[1].toUpperCase()].map(c => (0x1f1e6 + c.charCodeAt(0) - 65).toString(16)).join("-")}.png`
+      : "";
+
+    // Overall is the 3rd column
+    const overall = parseFloat($(children[2]).text().trim()) || 0;
+
+    const scores = {};
+    // Events start at index 3
+    Object.keys(eventMap).forEach((eventName, idx) => {
+      const code = eventMap[eventName];
+      const scoreTd = $(children[idx + 3]);
+      const scoreText = scoreTd.text().trim();
+      scores[code] = scoreText ? parseFloat(scoreText) : null;
+    });
+
+    countries.push({ country: countryName, rank, flag, overall, scores });
+  });
+
+  return countries;
 }
 
-scrape();
+// Update kinch.json
+export async function updateKinchJSON(jsonPath = "./src/lib/data/kinch.json") {
+  try {
+    console.log("Scraping Kinch data...");
+    const data = await scrapeKinchJSON();
+    fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), "utf8");
+    console.log(`Kinch JSON updated: ${jsonPath}`);
+  } catch (err) {
+    console.error("Error scraping Kinch:", err);
+  }
+}
+
+// Run directly if executed
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  updateKinchJSON();
+}

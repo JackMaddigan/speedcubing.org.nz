@@ -2,91 +2,70 @@
   import kinchData from "$lib/data/kinch.json";
 
   const events = [
-    "333","222","333bf","333oh","333fm","333mbf",
-    "444","444bf","555","555bf","666","777",
-    "clock","minx","pyram","skewb","sq1"
+    "333","222","444","555","666","777", "333bf","333fm", "333oh", "clock","minx","pyram","skewb","sq1", "444bf", "555bf", "333mbf"
   ];
 
+  // Generate <i> element HTML for event icons
   function eventToIcon(eventCode) {
-    return `<img src="https://raw.githubusercontent.com/cubing/icons/main/src/svg/event/${eventCode}.svg"
-      alt="${eventCode}" width="32" height="32" style="vertical-align:middle;">`;
+    return `<i class="cubing-icon event-${eventCode}"></i>`;
   }
 </script>
 
-<table>
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Country</th>
-      <th>Overall</th>
-      {#each events as e}
-        <th>{@html eventToIcon(e)}</th>
-      {/each}
-    </tr>
-  </thead>
-  <tbody>
-    {#each kinchData as row}
-      <tr class:highlight-nz={row.country === "New Zealand"}>
-        <td>{row.rank}</td>
-        <td>
-          <img src={row.flag} alt={row.country} width="24" height="24" style="vertical-align:middle;">
-          {row.country}
-        </td>
-        <td>{row.overall}</td>
+<div class="table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Country</th>
+        <th>Overall</th>
         {#each events as e}
-          <td>{row.scores[e]}</td>
+          <th>{@html eventToIcon(e)}</th>
         {/each}
       </tr>
-    {/each}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {#each kinchData as c}
+        <tr class={c.country.toLowerCase() === "new zealand" ? "highlight-nz" : ""}>
+          <td>{c.rank}</td>
+          <td>
+            <img src={c.flag} alt={c.country} width="24" height="24" style="vertical-align:middle; margin-right:6px;">
+            {c.country}
+          </td>
+          <td>{c.overall}</td>
+          {#each events as e}
+            <td>{c.scores[e]}</td>
+          {/each}
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+</div>
 
 <style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    background: #1c1c1c;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: white;
+  body { font-family: Arial, sans-serif; margin:20px; background:#121212; color:#fff; }
+
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
   }
 
-  th, td {
-    border: 1px solid #333;
-    padding: 6px 8px;
-    text-align: center;
-    color: white;
-  }
+  table { border-collapse: collapse; width: 100%; background:#1c1c1c; box-shadow:0 2px 8px rgba(0,0,0,0.3); min-width: 800px; }
+  th, td { border:1px solid #333; padding:6px 8px; text-align:center; font-size:13px; color:#fff; }
+  th { background-color:#46b04c; color:white; position:sticky; top:0; }
+  tr:nth-child(even){ background:#262626; }
+  td:first-child, th:first-child{ text-align:right; }
+  td:nth-child(2), th:nth-child(2){ text-align:left; }
+  img { vertical-align: middle; }
+  tr.highlight-nz { background:#333 !important; font-weight:bold; }
+  th:nth-child(-n+3), td:nth-child(-n+3) { font-weight: bold; }
 
-  th {
-    background-color: #46b04c;
-    position: sticky;
-    top: 0;
-  }
-
-  tr:nth-child(even) {
-    background: #262626;
-  }
-
-  td:first-child, th:first-child {
-    text-align: right;
-  }
-
-  td:nth-child(2), th:nth-child(2) {
-    text-align: left;
-  }
-
-  img {
+  /* Cubing icon styles */
+  .cubing-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
     vertical-align: middle;
-  }
-
-  tr.highlight-nz {
-    background: #333 !important;
-    font-weight: bold;
-  }
-
-  th:nth-child(-n+3), td:nth-child(-n+3) {
-    font-weight: bold;
   }
 </style>
