@@ -1,3 +1,5 @@
+<!-- The JS scraper is in src/tasks/update_kinch.js -->
+<!-- This svelte table handles rendering -->
 <script>
   import kinchData from "$lib/data/kinch.json";
 

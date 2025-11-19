@@ -1,3 +1,9 @@
+// this file will be automatically run by the GH action worflow in .github/workflows/update_kinch.yml
+// you can also run it manually with `node src/lib/tasks/update_kinch.js`
+// it will update src/lib/data/kinch.json
+// currently, it only scrapes the top 30 countries from https://wca.cuber.pro/, but you can edit line 51 to change that
+
+
 // src/lib/tasks/update_kinch.js
 import axios from "axios";
 import * as cheerio from "cheerio";
