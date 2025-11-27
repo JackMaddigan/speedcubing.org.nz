@@ -15,7 +15,9 @@
 
 <h1>COUNTRY RANKINGS</h1>
 
-<p class="kinch-yapping">Countries are ranked with a system called "Kinch Ranks", where every National Record is given a score based on how it compares to the World Record in that event, and those scores are averaged to give an overalls score for a country.</p>
+<p class="kinch-yapping">
+  Countries are ranked with a system called "Kinch Ranks", where every National Record is given a score based on how it compares to the World Record in that event, and those scores are averaged to give an overalls score for a country.
+</p>
 
 <div class="table-wrapper">
   <table>
@@ -33,11 +35,23 @@
       {#each kinchData as c}
         <tr class={c.country.toLowerCase() === "new zealand" ? "highlight-nz" : ""}>
           <td>{c.rank}</td>
+
+          <!-- FLAG + COUNTRY NAME: now unbreakable -->
           <td>
-            <img src={c.flag} alt={c.country} width="24" height="24" style="vertical-align:middle; margin-right:6px;">
-            {c.country}
+            <span class="country-cell">
+              <img
+                src={c.flag}
+                alt={c.country}
+                width="24"
+                height="24"
+                style="vertical-align:middle; margin-right:6px;"
+              >
+              {c.country}
+            </span>
           </td>
+
           <td>{c.overall}</td>
+
           {#each events as e}
             <td>{c.scores[e]}</td>
           {/each}
@@ -49,33 +63,28 @@
 
 <br>
 
-<p class="kinch-yapping">More rows can be found <a href="https://wca.cuber.pro/" target="_blank">here</a>.</p>
+<p class="kinch-yapping">
+  More rows can be found <a href="https://wca.cuber.pro/" target="_blank">here</a>.
+</p>
 
 <style>
-  body { 
-    font-family: Arial, sans-serif; 
-    margin:20px; 
-    background:#121212; 
-    color:#fff; 
-  }
-
   .kinch-yapping {
-    margin: 40px auto 0 auto; /* top margin 40px, center horizontally */
+    margin: 40px auto 0 auto;
     text-align: center;
-    max-width: 1200px;       /* prevents it from stretching too wide */
-    padding: 0 20px;         /* adds space on left and right */
-    box-sizing: border-box;  /* ensures padding doesn’t break max-width */
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .table-wrapper {
-    padding: 0 40px;          /* desktop side padding */
+    padding: 0 40px;
     margin-top: 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   table {
-    width: 100%;              
+    width: 100%;
     border-collapse: collapse;
     background: #1c1c1c;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -100,11 +109,11 @@
     background:#262626; 
   }
 
-  td:first-child, th:first-child{ 
+  td:first-child, th:first-child { 
     text-align:right; 
   }
 
-  td:nth-child(2), th:nth-child(2){ 
+  td:nth-child(2), th:nth-child(2) { 
     text-align:left; 
   }
 
@@ -121,14 +130,11 @@
     font-weight: bold; 
   }
 
-  /* Cubing icon styles */
-  .cubing-icon {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
+  /* Prevent flag + country name from breaking */
+  .country-cell {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
   }
 
   /* -------------------------- */
@@ -136,17 +142,12 @@
   /* -------------------------- */
   @media (max-width: 600px) {
     .table-wrapper {
-      padding: 0 10px; /* reduce mobile side padding */
+      padding: 0 10px;
     }
 
     th, td {
       padding: 4px 6px;
       font-size: 12px;
-    }
-
-    .cubing-icon {
-      width: 24px;
-      height: 24px;
     }
   }
 </style>
